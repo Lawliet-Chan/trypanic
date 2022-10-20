@@ -25,6 +25,6 @@ func testPanic() (err error) {
 			err = errors.New(fmt.Sprintf("panic: %v", r))
 		}
 	}()
-	C.demo()
+	C.trying()
 	return
 }
