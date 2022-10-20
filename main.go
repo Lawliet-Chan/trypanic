@@ -12,6 +12,7 @@ import (
 )
 
 func main() {
+	fmt.Println("-----start-------")
 	err := testPanic()
 	if err != nil {
 		fmt.Println("------------------err:", err)
