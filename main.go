@@ -1,7 +1,7 @@
 package main
 
 /*
-#cgo LDFLAGS: ./lib/libdemo.a
+#cgo LDFLAGS: ./lib/libdemo.a -lm -ldl
 #include <stdlib.h>
 #include "./lib/demo.h"
 */
