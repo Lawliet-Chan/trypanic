@@ -14,15 +14,15 @@ import (
 func main() {
 	err := testPanic()
 	if err != nil {
-		fmt.Println("err:", err)
+		fmt.Println("------------------err:", err)
 	}
-	fmt.Println("fin...")
+	fmt.Println("----------------------fin...")
 }
 
 func testPanic() (err error) {
 	defer func() {
 		if r := recover(); r != nil {
-			err = errors.New(fmt.Sprintf("panic: %v", r))
+			err = errors.New(fmt.Sprintf("---------------panic: %v", r))
 		}
 	}()
 	C.trying()
