@@ -7,7 +7,6 @@ package main
 */
 import "C"
 import (
-	"errors"
 	"fmt"
 )
 
@@ -21,12 +20,13 @@ func main() {
 }
 
 func testPanic() (err error) {
-	defer func() {
-		if r := recover(); r != nil {
-			fmt.Println("!!!!!!!!!!!!panic!!!!!!!!!!!!!! ", r)
-			err = errors.New(fmt.Sprintf("---------------panic: %v", r))
-		}
-	}()
+	//defer func() {
+	//	if r := recover(); r != nil {
+	//		fmt.Println("!!!!!!!!!!!!panic!!!!!!!!!!!!!! ", r)
+	//		err = errors.New(fmt.Sprintf("---------------panic: %v", r))
+	//	}
+	//}()
 	C.trying()
+	fmt.Println("-----------tried!!!")
 	return
 }
